@@ -241,7 +241,8 @@ const App = () => {
           <p className="hero-subtitle">
             {texts[language].heroSubtitle}
           </p>
-          <Button variant="dark" className="hero-button">{texts[language].buttonText}</Button>
+          <Button onClick={() => window.open("https://app.medacarehealth.com/", "_blank")}
+            variant="dark" className="hero-button">{texts[language].buttonText}</Button>
         </Container>
       </header>
 
@@ -491,12 +492,14 @@ const App = () => {
               {/* Left Side - Image & Text */}
               <Col lg={6} md={12} className="clients-image">
                 <div className="ourClients-header">
-                  <div className="ourClients-usButton">
+
+                  <Row><Container className="ourClients-usButton">
                     {texts[language].ourClientsTitle1}
-                    <span className="ourClients-ArrowButton">
+                  </Container>
+                    <Container className="ourClients-usButton ourClients-ArrowButton">
                       <ArrowSide />
-                    </span>
-                  </div>
+                    </Container>
+                  </Row>
                 </div>
 
 
@@ -542,9 +545,9 @@ const App = () => {
 
           <div className='strategic-alliance'>
             <Row>
-              <div className='emptysquare'>
+              <Container className='emptysquare'>
                 {/* Espacio vacío según diseño */}
-              </div>
+              </Container>
             </Row>
 
             <Row className='mx-auto'>
@@ -566,11 +569,10 @@ const App = () => {
               </Col>
             </Row>
             <Row>
-              <div className='emptysquare2'>
+              <Container className='emptysquare2'>
                 {/* Espacio vacío según diseño */}
-              </div>
+              </Container>
             </Row>
-
           </div>
         </Container>
       </section>
@@ -590,13 +592,14 @@ const App = () => {
               <Row className="justify-content-center text-center">
                 <Col md={2} className="footer-column fotter-mexico">
                   <h5 className="footer-title">United States</h5>
-                  <p className="fotter-text">78370 Highway 111 Suite 270, La Quinta, CA, 92253</p>
+                  <p className="fotter-text">78370 Highway 111 Suite 270,</p>
+                  <p className="fotter-text"> La Quinta, CA, 92253</p>
                 </Col>
                 <Col md={2} className="footer-column fotter-mexico">
                   <h5 className="footer-title">México</h5>
-                  <p className="fotter-text"><strong>Management:</strong> Ave Rayón No. 472, Zona Centro, Ensenada, B.C. CP. 22800</p>
-                  <p className="fotter-text"><strong>Medacare Natural - Botanical:</strong> Calle Cuarta 2083 Local 15, Col. Obrera, Ensenada, B.C CP. 22830</p>
-                  <p className="fotter-text"><strong>Clinics Príncipe Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
+                  <p className="fotter-text1"><strong>Management:</strong> Ave Rayón No. 472, Zona Centro, Ensenada, B.C. CP. 22800</p>
+                  <p className="fotter-text1"><strong>Medacare Natural - Botanical:</strong> Calle Cuarta 2083 Local 15, Col. Obrera, Ensenada, B.C CP. 22830</p>
+                  <p className="fotter-text1"><strong>Clinics Príncipe Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
                 </Col>
               </Row>
               <Row className="justify-content-center text-center">
@@ -608,7 +611,12 @@ const App = () => {
               </Row>
               <Row className="justify-content-center text-center">
                 <Col md={1} className="footer-email">
-                  <LogoCorreo /> <span className="fotter-text">info@medacarehealth.com</span>
+                  <LogoCorreo /> <span className="fotter-text">
+                    <a style={{ textDecoration: 'none', color: 'inherit' }}
+                      href="mailto:info@medacarehealth.com" className="footer-text">
+                      info@medacarehealth.com
+                    </a>
+                  </span>
                 </Col>
               </Row>
             </>
@@ -625,18 +633,24 @@ const App = () => {
                 </div>
                 <Row>
                   <Col md={1}><LogoCorreo /></Col>
-                  <Col className="foter-correo"><p className="fotter-text">info@medacarehealth.com</p></Col>
+                  <Col className="foter-correo"><p className="fotter-text">                  <a style={{ textDecoration: 'none', color: 'inherit' }}
+                    href="mailto:info@medacarehealth.com" className="footer-text">
+                    info@medacarehealth.com
+                  </a>
+                  </p></Col>
                 </Row>
               </Col>
               <Col md={4} className="footer-column">
                 <h5 className="footer-title">United States</h5>
-                <p className="fotter-text">78370 Highway 111 Suite 270, La Quinta, CA, 92253</p>
+                <p className="fotter-text">78370 Highway 111 Suite 270,</p>
+                <p className="fotter-text"> La Quinta, CA, 92253</p>
+
               </Col>
               <Col md={4} className="footer-column fotter-mexico">
                 <h5 className="footer-title">México</h5>
-                <p className="fotter-text"><strong>Management:</strong> Ave Rayón No. 472, Zona Centro, Ensenada, B.C. CP. 22800</p>
-                <p className="fotter-text"><strong>Medacare Natural - Botanical:</strong> Calle Cuarta 2083 Local 15, Col. Obrera, Ensenada, B.C CP. 22830</p>
-                <p className="fotter-text"><strong>Clinics Príncipe Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
+                <p className="fotter-text1"><strong>Management:</strong> Ave Rayón No. 472, Zona Centro, Ensenada, B.C. CP. 22800</p>
+                <p className="fotter-text1"><strong>Medacare Natural - Botanical:</strong> Calle Cuarta 2083 Local 15, Col. Obrera, Ensenada, B.C CP. 22830</p>
+                <p className="fotter-text1"><strong>Clinics Príncipe Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
               </Col>
             </Row>
           )}

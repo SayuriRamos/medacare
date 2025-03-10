@@ -56,10 +56,53 @@
   font-style: italic;
 }
 
+@media (min-width: 1200px) {
+
+  .app-section {
+    background-size: 80% !important; /* Adjust to fit smaller screens */
+    background-position: -4vw 2vh!important; /* Ensures it stays on the left */
+  }
+  
+  /* Styles for screens larger than 15 inches */
+  .emptysquare {
+    height: 60vh !important; /* Adjusts for larger screens */
+  }
+
+  .emptysquare2 {
+    height: 65vh !important; /* Adjusts for larger screens */
+  }
+}
 
 @media (max-width: 991px) { /* Bootstrap's lg breakpoint */
   .desktop-logo {
-    display: none;
+    display: none; /* Hide desktop logo */
+  }
+  .mobile-logo {
+    display: inline-block; /* Show mobile logo */
+  }
+
+  .logo-center {
+    position: absolute;
+    transform: translateX(50%);
+    display: flex;
+    align-items: center;
+    right: 50%;
+    justify-content: center;
+    top: 45px;
+  }
+
+  .language-switcher {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px; /* Adjust this to position it correctly */
+  }
+
+  .navbar-collapse {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content */
   }
 
   .about-box {
@@ -124,9 +167,21 @@
     letter-spacing: 0%;
     font-size: 14px !important;
     line-height: 18px;
-    padding: 0;
-    margin: 0;
+    padding: 0 !important;
+    margin: 0 !important;
   }
+
+  .fotter-text1 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 600 !important;
+    font-size: 30px !important;
+    line-height: 100% !important;
+    letter-spacing: 0%;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    margin-bottom: 14px !important;
+  }
+
 
   .social-icons {
     justify-content: left;
@@ -152,8 +207,8 @@
     width: 100%;
     text-align: left;
     margin-bottom: 32px !important;
-    padding-left: 48px !important;
-    padding-right: 67px !important;
+    padding-left: 45px !important;
+    padding-right: 55px !important;
   }
 
   .footer-email {
@@ -252,7 +307,7 @@
     background-color: #FBAE1C; /* White background */
     border-radius: 30px !important;
     padding: 6px;
-    width: 174px !important;
+    width: 190px !important;
     height: 37px !important;
     
     margin-top: 112px;
@@ -327,9 +382,11 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
   .clients-list li {
-    font-size: 20px;
-    line-height: 56px;
+  font-size: 15px !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
     border-bottom: 2px solid #263732; /* Ajusta el grosor aquí */
     padding-bottom: 5px;
     list-style: none;
@@ -377,17 +434,6 @@ margin: 0 !important;
 margin-bottom: 112px !important;
 }
 
-.emptysquare{
-  height: 350px !important;
-  width: 50% !important;
-}
-
-
-.emptysquare2{
-  height: 112px !important;
-  width: 50%;
-}
-
 .yellowApp {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   font-weight: 700 !important;
@@ -419,13 +465,20 @@ padding-right: 15px I !important;
 }
 
 .app-section {
-  display: flex;
-  justify-content: center;
-  background: url('./../public/images/Foto\ Mano.png') no-repeat;
-  background-size: 200% !important;
-  background-position: -323px 50px !important; /* Moves it 30px down */
-  padding-bottom: 0px;
+  background-size: 120% !important; /* Adjust to fit smaller screens */
+  background-position: -30vw 14vh!important; /* Ensures it stays on the left */
 }
+
+.emptysquare {
+  height: 30vh !important; /* Adjusts between 200px (min) and 600px (max) */
+}
+
+.emptysquare2 {
+  height: 10vh !important; /* Adjusts between 50px (min) and 119px (max) */
+}
+
+
+
 
 .navbar {
   font-family: "Plus Jakarta Sans", sans-serif !important;
@@ -450,18 +503,32 @@ padding-right: 15px I !important;
 
 @media (min-width: 992px) {
   .mobile-logo {
-    display: none;
+    display: none; /* Hide mobile logo */
+  }
+  .desktop-logo {
+    display: inline-block; /* Show desktop logo */
   }
 
 }
 
+@media (max-width: 600px) { /* For smaller phones */
+  .app-section {
+    background-size: 120%; /* Slightly increase size for better fit */
+    background-position: left center;
+  }
+  
+  
+}
+
+
 .navbar-toggler-custom {
-  margin-left: auto !important; /* Pushes the toggle button to the right */
+  margin-left: auto !important; /* Pushes button language-switcher the right */
   display: flex;
-  border: none; /* Remove border */
+  border: none;
   align-items: center;
   justify-content: center;
-  border-radius: 28PX;
+  border-radius: 28px;
+  z-index: 10; 
 }
 
 
@@ -470,17 +537,6 @@ padding-right: 15px I !important;
   align-items: center;
 }
 
-.isotipo-container {
-
-}
-
-
-/* Center the LogoSinIsotipo */
-.logo-center {
-  align-items: center;
-  margin-left: 30px;
-  justify-content: center;
-}
 
 html, body {
   margin: 0;
@@ -491,6 +547,21 @@ html, body {
 .navbar-toggler {
   margin-left: auto; /* Esto moverá el icono de abrir menú hacia la derecha */
 }
+
+.navbar-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+}
+
 
 
 .contesnt{
@@ -507,47 +578,49 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100vw; /* Ensure the navbar takes the full width of the screen */
-  margin: 0; /* Remove any default margin */
+  width: 100vw; /* Full width */
+  margin: 0;
   padding-top: 38px;
-  padding-bottom: 0; /* Adjust padding as needed */
+  padding-bottom: 0;
   margin-bottom: 122px;
   padding-left: 60px;
   padding-right: 60px;
 }
 
 .navbar .container {
-  width: 100%;
-  padding: 0; 
-  margin: 0;/* Remove padding from container */
 }
 
 .navbar-nav {
-  flex-grow: 1;
-  justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center; /* Center navigation links */
 }
 
 .language-switcher {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   font-weight: 600;
   font-size: 14px;
-  line-height: 17.64px;
-  letter-spacing: 0%;
-  text-align: center;
   display: flex;
-  margin-left: auto;
+  justify-content: center;
   align-items: center;
-  max-height: 44px;
-  max-width: 175px;
   background-color: #FBAE1C; /* Yellow background */
-  border-radius: 30px !important;
+  border-radius: 30px;
   padding: 5px;
   width: fit-content;
+
 }
 
 .navbar-brand {
   margin-right: auto; /* Pushes logo to the left */
 }
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+}
+
 
 .label .text-wrapper {
   font-family: "Plus Jakarta Sans", sans-serif !important;
@@ -573,6 +646,7 @@ html, body {
     border-radius: 22px !important; /* Rounded buttons */
     transition: 0.3s;
     font-size: 14px;
+    
   }
 
   .toggle-btn.active {
@@ -595,6 +669,15 @@ html, body {
     color: rgba(0, 0, 0, 0.5) !important; /* Faded text for inactive button */
   }
 
+  .language-switcher-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+      
+
   
   
 
@@ -612,7 +695,7 @@ html, body {
   
   .hero-section {
     font-family: "Plus Jakarta Sans", sans-serif !important;
-    background: url('./../public/images/ImgAnimacionHeader.png') repeat-x; /* Ensure it repeats horizontally */
+    background: url('./assets/ImgAnimacionHeader.png') repeat-x; /* Ensure it repeats horizontally */
     background-size: cover;
     min-height: 638px;
     display: flex;
@@ -817,6 +900,7 @@ letter-spacing: 0% !important;
   border-width: 0; /* Ensures responsiveness */
 }
 
+
 /* Bigger Yellow Boxes */
 .service-0, .service-3 {
   height: 370px;
@@ -863,31 +947,30 @@ ul li {
   margin-bottom: 50px;
 }
 
-/* Our Clients Button */
+/* "About Us" Button */
 .ourClients-usButton {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
   font-size: 20px;
-  background-color: #263732;
-  border-radius: 30px;
-  padding: 6px 20px;
-  color: #F7FBFC;
-  width: fit-content;
-  height: 51px;
-}
-
-/* Arrow Inside Button */
-.ourClients-ArrowButton {
+  line-height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  margin-left: 10px;
+  border-radius: 30px;
+  padding: 8px;
+  background-color: #263732;
+  width: 130px; /* Adjusted for responsiveness */
+  height: 48px;
+  width: fit-content;
+  color: #F7FBFC;
+
+}
+
+/* Arrow Button */
+.ourClients-ArrowButton {
+  border-radius: 60px;
+  width: 45px;
+  height: 45px;
 }
 
 /* Background Box */
@@ -924,6 +1007,8 @@ ul li {
   flex: 1;
   min-width: 50%;
   text-align: left;
+  align-items: start;
+  justify-items: left;
   padding-right: 100px;
 }
 
@@ -974,7 +1059,7 @@ ul li {
   border-bottom: 2px solid #263732; /* Ajusta el grosor aquí */
   padding-bottom: 5px;
   list-style: none;
-  width: 150%;
+  width: 140%;
 }
 
 .apptelemedicine {
@@ -994,53 +1079,72 @@ ul li {
   height: 51px;
 }
 
-.emptysquare{
-  height: 600px;
-  
+.emptysquare {
+  height: 35vh; /* Adjusts between 200px (min) and 600px (max) */
 }
 
-
-.emptysquare2{
-  height: 119px;
-  
+.emptysquare2 {
+  height: 50vh; /* Adjusts between 50px (min) and 119px (max) */
 }
+
+.strategic-alliance1{
+  margin-top: 83px;
+  margin-bottom: 50px;
+}
+
 
 .yellowApp {
   font-family: "Plus Jakarta Sans", sans-serif !important;
   font-weight: 700 !important;
-  font-size: 20px;
+  font-size: clamp(1rem, 2vw, 1.5rem); /* Responsive font size */
   line-height: 53px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FBAE1C; /* White background */
-  border-radius: 30px !important;
-  padding: 6px;
+  background-color: #FBAE1C;
+  border-radius: 30px;
+  padding: 10px 20px;
   color: #131313;
-  width: 193px;
-  height: 58px;
+  width: auto; /* Adjusts based on content */
+  text-align: center;
+  cursor: pointer;
+
+  /* Centering it */
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
-.textapp{
-font-family: Plus Jakarta Sans, sans-serif;
-font-weight: 600;
-font-size: 20px;
-line-height: 25.2px;
-letter-spacing: 0%;
-text-align: center;
-justify-items: center;
-margin-right: 400px;
-margin-left: 400px;
-margin-top: 500spx;
+.textapp {
+  font-family: Plus Jakarta Sans, sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 25.2px;
+  letter-spacing: 0%;
+  color: #131313;
+  text-align: center;
+  
+  /* Proper centering */
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  width: 80%; /* Ensures proper text wrapping */
+  max-width: 500px;
 }
 
 .app-section {
+  position: relative; /* Ensures other elements position relative to this section */
   display: flex;
   justify-content: center;
-  background: url('./../public/images/Foto\ Mano.png') no-repeat;
-  background-size: 75%;
-  background-position: left 30px; /* Moves it 30px down */
-  padding-bottom: 0px;
+  align-items: center;
+  background: url('./assets/Foto Mano.png') no-repeat;
+  background-size: 75%; /* Ensures correct scaling */
+  background-position: left 10vh; /* Keeps it aligned left with a 30px offset */
+  padding-bottom: 0;
+  min-height: 80vh; /* Ensures enough height */
 }
 
 .footer-container {
@@ -1063,7 +1167,20 @@ margin-top: 500spx;
   font-size: 16px !important;
   line-height: 20.16px !important;
   color: #F7FBFC;
+  margin: 0;
+
+  
 }
+
+.fotter-text1 {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  line-height: 20.16px !important;
+  color: #F7FBFC;
+  margin-bottom: 14px !important;
+}
+
 
 .footer-title {
   font-family: "Plus Jakarta Sans", sans-serif !important;
