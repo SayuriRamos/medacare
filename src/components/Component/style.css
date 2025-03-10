@@ -1,0 +1,29 @@
+.component {
+    background-color: var(--variable-collection-medacare-orange);
+    border-radius: 22px;
+    height: 44px;
+    position: relative;
+    width: 147px;
+  }
+  
+  .component .ir-a-la-app {
+    color: var(--variable-collection-medacare-black);
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-size: 14px;
+    font-weight: 700;
+    left: 41px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 11px;
+  }
+  
+  .component:hover {
+    background-color: #ffcb80;
+  }
+  
+  .component:hover .ir-a-la-app {
+    color: var(--variable-collection-medacare-white);
+  }
+  

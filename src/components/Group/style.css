@@ -1,0 +1,30 @@
+.group {
+    background-color: var(--variable-collection-medacare-black);
+    border-radius: 28.5px;
+    height: 57px;
+    position: relative;
+    width: 220px;
+  }
+  
+  .group .ir-a-consulta {
+    color: var(--variable-collection-medacare-white);
+    font-family: "Plus Jakarta Sans", Helvetica;
+    font-size: 24px;
+    font-weight: 700;
+    left: 6px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    text-align: center;
+    top: 10px;
+    width: 208px;
+  }
+  
+  .group:hover {
+    background-color: #474747;
+  }
+  
+  .group:hover .ir-a-consulta {
+    color: #e8edec;
+  }
+  

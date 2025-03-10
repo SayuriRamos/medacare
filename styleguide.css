@@ -1,0 +1,12 @@
+:root {
+    --variable-collection-medacare-black: rgba(19, 19, 19, 1);
+    --variable-collection-medacare-blue: rgba(117, 206, 227, 1);
+    --variable-collection-medacare-dark-gray: rgba(61, 58, 58, 1);
+    --variable-collection-medacare-dark-green: rgba(38, 55, 50, 1);
+    --variable-collection-medacare-gray: rgba(232, 237, 236, 1);
+    --variable-collection-medacare-light-blue: rgba(180, 233, 239, 1);
+    --variable-collection-medacare-light-orange: rgba(255, 203, 128, 1);
+    --variable-collection-medacare-orange: rgba(251, 174, 28, 1);
+    --variable-collection-medacare-white: rgba(247, 251, 252, 1);
+  }
+  
