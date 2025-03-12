@@ -831,6 +831,7 @@ letter-spacing: 0% !important;
 
 /* Subtitle */
 .subtitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
   font-size: clamp(1rem, 2vw, 18px); /* Scales dynamically */
   line-height: 1.5;
   max-width: 800px;
