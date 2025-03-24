@@ -599,7 +599,7 @@ const App = () => {
                   <h5 className="footer-title">México</h5>
                   <p className="fotter-text1"><strong>Management:</strong> Ave Rayón No. 472, Zona Centro, Ensenada, B.C. CP. 22800</p>
                   <p className="fotter-text1"><strong>Medacare Natural - Botanical:</strong> Calle Cuarta 2083 Local 15, Col. Obrera, Ensenada, B.C CP. 22830</p>
-                  <p className="fotter-text1"><strong>Clinics Príncipe Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
+                  <p className="fotter-text1"><strong>Clínicas Primero Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
                 </Col>
               </Row>
               <Row className="justify-content-center text-center">
@@ -650,7 +650,7 @@ const App = () => {
                 <h5 className="footer-title">México</h5>
                 <p className="fotter-text1"><strong>Management:</strong> Ave Rayón No. 472, Zona Centro, Ensenada, B.C. CP. 22800</p>
                 <p className="fotter-text1"><strong>Medacare Natural - Botanical:</strong> Calle Cuarta 2083 Local 15, Col. Obrera, Ensenada, B.C CP. 22830</p>
-                <p className="fotter-text1"><strong>Clinics Príncipe Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
+                <p className="fotter-text1"><strong>Clínicas Primero Salud:</strong> Calzada del Tecnológico 2100 Local 342, Otay Constituyentes, 22457 Tijuana, B.C.</p>
               </Col>
             </Row>
           )}
